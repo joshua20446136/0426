@@ -55,7 +55,8 @@ if __name__ == "__main__":
 
         if len(row["法定代表人证件号码"]) <=3:
             continue 
-
+        delay = random.uniform(5, 10)
+        time.sleep(delay)
         dp.to_tab(dp.find_tabs(url="login_manager"))
 
         dp.ele('xpath://*[@id="pn_tab0"]/table/tbody/tr/td/table/tbody/tr[1]/td[4]/input').input(row["统一社会信用代码"])
