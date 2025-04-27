@@ -53,7 +53,7 @@ if __name__ == "__main__":
     print("开始逐行处理数据...")
     for index, row in df.iterrows():
 
-        if row["法定代表人证件号码"] <=3:
+        if len(row["法定代表人证件号码"]) <=3:
             continue 
 
         dp.to_tab(dp.find_tabs(url="login_manager"))
