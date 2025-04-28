@@ -8,8 +8,8 @@ if __name__ == "__main__":
 
 
     file_path = "表格.xlsx"
-    df = pd.read_excel(file_path, sheet_name="Sheet1")
-
+    df = pd.read_excel(file_path,dtype=str, sheet_name="Sheet1")
+    df['法定代表人证件号码'] = df['法定代表人证件号码'].astype(str)
 
     username = 'x10041'
     password = 'lixin6111.'
@@ -53,9 +53,9 @@ if __name__ == "__main__":
     print("开始逐行处理数据...")
     for index, row in df.iterrows():
 
-        if len(row["法定代表人证件号码"]) <=3:
+        if not len(row["法定代表人证件号码"]) <=3:
             continue 
-        delay = random.uniform(5, 11)
+        delay = random.uniform(5, 10)
         time.sleep(delay)
         dp.to_tab(dp.find_tabs(url="login_manager"))
 
