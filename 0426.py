@@ -1,3 +1,4 @@
+import random
 from DrissionPage import ChromiumPage,ChromiumOptions
 from DrissionPage.errors import ElementNotFoundError
 import pandas as pd
