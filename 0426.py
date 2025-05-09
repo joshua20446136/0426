@@ -17,6 +17,7 @@ if __name__ == "__main__":
     password = 'lixin6111.'
 
     opts = ChromiumOptions()
+    
     opts.set_argument('--start-maximized')  
     dp = ChromiumPage(opts)
     dp.set.window.maximized()
