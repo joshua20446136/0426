@@ -8,7 +8,7 @@ import time
 
 if __name__ == "__main__":
 
-
+    #f1111111
     file_path = "表格.xlsx"
     df = pd.read_excel(file_path,dtype=str, sheet_name="Sheet1")
     df['法定代表人证件号码'] = df['法定代表人证件号码'].astype(str)
