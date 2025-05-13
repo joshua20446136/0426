@@ -8,8 +8,6 @@ import time
 
 if __name__ == "__main__":
 
-    #sldkjlfj
-    #f1111111
     file_path = "表格.xlsx"
     df = pd.read_excel(file_path,dtype=str, sheet_name="Sheet1")
     df['法定代表人证件号码'] = df['法定代表人证件号码'].astype(str)
@@ -53,7 +51,7 @@ if __name__ == "__main__":
     time.sleep(3)
 
 
-    print("开始逐行处理数据...")
+
     for index, row in df.iterrows():
 
         if not len(row["法定代表人证件号码"]) <=3:
